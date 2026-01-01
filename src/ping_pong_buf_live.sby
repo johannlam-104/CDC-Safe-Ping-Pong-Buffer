@@ -1,0 +1,15 @@
+[options]
+mode live
+depth 200
+
+[engines]
+smtbmc
+
+[script]
+read -formal ping_pong_buf_formal_wrap.v ping_pong_buf.v mem_bram.v
+prep -top ping_pong_buf_formal_wrap
+
+[files]
+ping_pong_buf_formal_wrap.v
+ping_pong_buf.v
+mem_bram.v
